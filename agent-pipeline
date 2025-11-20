@@ -1,0 +1,21 @@
+pipeline {
+  agent { label "akshat" }
+
+  stages {
+      stage('start') {
+        steps {
+          echo "Start"
+        }
+      }
+      stage('create') {
+        steps {
+          sh "mkdir -p devops"
+        }
+      }
+      stage('end') {
+        steps {
+          echo "Completed"
+        }
+      }
+  }
+}
